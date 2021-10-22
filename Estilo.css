@@ -6,6 +6,7 @@ body
     align-items: center;
     justify-content: space-around;
     background-image: url(banner-2.jpg);
+    overflow-y: hidden;
 }
 
 .hex1, .hex2{
@@ -46,11 +47,11 @@ body
     z-index:1;
 }
 .hex1.in:before {
-    top: -11.97vw;
+    top: -11.93vw;
     border-bottom: 12vw solid black;
 }
 .hex1.in:after {
-    bottom: -11.97vw;
+    bottom: -11.93vw;
     border-top: 12vw solid black;
 }
 .hex2
@@ -82,12 +83,12 @@ body
 }
 .hex2.in:before 
 {
-    top: -11.97vw;
+    top: -11.93vw;
     border-bottom: 12vw solid black;
 }
 .hex2.in:after 
 {
-    bottom: -11.97vw;
+    bottom: -11.93vw;
     border-top: 12vw solid black;
 }
 @keyframes slideInFromLeft {
@@ -166,4 +167,77 @@ a:hover
     color:  #f3b202;
     text-decoration: underline;
 
+}
+.formulario
+{
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.GIF
+{
+    width:7.8vw ;
+    height: 7.8vw;
+    position: absolute;
+    bottom: 20vw;
+}
+.formulariodiv
+{
+  color: white;
+  text-align: left;
+  font-weight: bold;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Dosis', sans-serif;
+  background: black;
+  z-index: 1;
+
+}
+form
+{
+    display: flex;
+    background-color: black;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-flow: column wrap;
+
+}
+.fname, .CEP, .Renda, .Dependentes, .Botao
+{
+  display: flex;
+  flex-flow: column wrap;
+  height: 20%;
+  align-content: space-around;
+  justify-content: space-around;
+  font-size: 100%;
+
+
+}
+.Botao input
+{
+  padding: 7%;
+  border: 0;
+  border-radius: 100%;
+  background: #f3b202;
+}
+.Botao input:hover
+{
+  font-family: 'Dosis', sans-serif;
+  color: white;
+  background: black;
 }
