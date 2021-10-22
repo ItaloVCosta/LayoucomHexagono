@@ -5,26 +5,53 @@ body
     margin: 0;
     align-items: center;
     justify-content: space-around;
+    background-image: url(banner-2.jpg);
 }
 
 .hex {
-    margin-top: 3.55vw;
-    width: 20vw;
-    height: 11.54vw;
-    background: #6C6;
+    width: 40vw;
+    height: 20vw;
+    background:#f3b202;
     position: relative;
+    
+}
+.hex:nth-child(1)
+{
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+.hex:nth-child(2)
+{
+    animation: 1s ease-out 0s 1 slideInFromRight;
 }
 .hex::before, .hex::after {
     content:"";
-    border-left: 10vw solid transparent;
-    border-right: 10vw solid transparent;
+    border-left: 20vw solid transparent;
+    border-right: 20vw solid transparent;
     position: absolute;
 }
 .hex::before {
-    top: -6vw;
-    border-bottom: 6vw solid #6C6;
+    top: -12vw;
+    border-bottom: 12vw solid #f3b202;
 }
 .hex::after {
-    bottom: -6vw;
-    border-top: 6vw solid #6C6;
+    bottom: -12vw;
+    border-top: 12vw solid #f3b202;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
