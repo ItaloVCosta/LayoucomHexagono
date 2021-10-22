@@ -1,38 +1,30 @@
-.RightSide
-{
-    background-color: aqua;
-    width: 50vw;
-}
-.LeftSide
-{
-    background-color: red;
-    width: 50vw;
-}
+
 body
 {
     display: flex;
     margin: 0;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
-.lado1e4, .lado2e5, .lado3e6
-{
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+
+.hex {
+    margin-top: 70px;
+    width: 20vw;
+    height: 11.54vw;
+    background: #6C6;
+    position: relative;
 }
-.lado1e4
-{
-    transform: rotate(45deg);
+.hex:before, .hex:after {
+    content:"";
+    border-left: 104px solid transparent;
+    border-right: 104px solid transparent;
+    position: absolute;
 }
-.lado2e5
-{
-    transform: rotate(90deg);
+.hex:before {
+    top: -59px;
+    border-bottom: 60px solid #6C6;
 }
-.lado3e6
-{
-    transform: rotate(135deg);
+.hex:after {
+    bottom: -59px;
+    border-top: 60px solid #6C6;
 }
