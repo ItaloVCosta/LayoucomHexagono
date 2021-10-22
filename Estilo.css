@@ -8,23 +8,23 @@ body
 }
 
 .hex {
-    margin-top: 70px;
+    margin-top: 3.55vw;
     width: 20vw;
     height: 11.54vw;
     background: #6C6;
     position: relative;
 }
-.hex:before, .hex:after {
+.hex::before, .hex::after {
     content:"";
-    border-left: 104px solid transparent;
-    border-right: 104px solid transparent;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
     position: absolute;
 }
-.hex:before {
-    top: -59px;
-    border-bottom: 60px solid #6C6;
+.hex::before {
+    top: -6vw;
+    border-bottom: 6vw solid #6C6;
 }
-.hex:after {
-    bottom: -59px;
-    border-top: 60px solid #6C6;
+.hex::after {
+    bottom: -6vw;
+    border-top: 6vw solid #6C6;
 }
