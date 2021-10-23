@@ -1,7 +1,7 @@
 const express = require('express')
 const app= express()
 const bodyParser= require('body-parser')
-const fetch = require('node-fetch')
+const fetch = require('cross-fetch')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.post('/RetornoServer',(req,resp) =>{
@@ -10,11 +10,9 @@ app.post('/RetornoServer',(req,resp) =>{
     const Percapita = Renda/req.body.Dependentes
     var CEP = req.body.CEP
     CEP = CEP.replace(/[^\d]+/g,'')
-    console.log(`https://viacep.com.br/ws/${CEP}/json`)
-    fetch('https://google.com')
-    .then(res => res.text())
-    .then(text => console.log(text))
-  /*   fetch(`https://viacep.com.br/ws/${CEP}/json`).then(response => console.log(response)) */
+    const URL =`https://viacep.com.br/ws/${CEP}/json`
+    console.log(URL)
+    fetch(URL).then(response =>response.json()).then(console.log)
     if(req.body.fullname != '')
         resp.send("Nome: " + req.body.fullname + "<br> Endereço: " + req.body.CEP + "<br> Renda per capita: " + Percapita.toFixed(2) )
     else
