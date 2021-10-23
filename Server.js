@@ -13,6 +13,7 @@ app.post('/RetornoServer',(req,resp) =>{
     const URL =`https://viacep.com.br/ws/${CEP}/json`
     console.log(URL)
     fetch(URL).then(response =>response.json()).then(console.log)
+    
     if(req.body.fullname != '')
         resp.send("Nome: " + req.body.fullname + "<br> Endereço: " + req.body.CEP + "<br> Renda per capita: " + Percapita.toFixed(2) )
     else
