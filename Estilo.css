@@ -224,9 +224,7 @@ form
   height: 20%;
   align-content: space-around;
   justify-content: space-around;
-  font-size: 100%;
-
-
+  font-size: 1vw;  
 }
 .Botao input
 {
