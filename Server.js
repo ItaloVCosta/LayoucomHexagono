@@ -6,11 +6,6 @@ const { response } = require('express')
 app.use(bodyParser.urlencoded({extended: true}))
 
 
-const showData = (resultado)=>{
-            console.log(resultado.localidade)
-         
-}
-
 app.post('/RetornoServer',(req,resp) => {
     console.log(req.body)
     let Renda =req.body.Renda
@@ -23,11 +18,16 @@ app.post('/RetornoServer',(req,resp) => {
 
     fetch(URL)
         .then(response =>{response.json()
-            .then(data => showData(data))
+            .then(data => 
+                
+                    resp.send("Nome"  + "<br>CEP: " + data.cep +"<br> Cidade: "+ data.localidade + "<br> Bairro: " +data.bairro +  "<br> Rua: " + data.logradouro +"<br> Renda per capuita:")
+                )
         })
-    if(req.body.fullname != '')
+
+/*     if(req.body.fullname != '')
         resp.send("Nome: " + req.body.fullname + "<br> Endereço: " + req.body.CEP + "<br> Renda per capita: " + Percapita.toFixed(2) )
     else
-        resp.send( "Endereço: " + req.body.CEP + "<br> Renda per capita: " + Percapita.toFixed(2)) 
-})
+        resp.send("CEP: " + cep +"<br> Cidade: "+ data.localidade + "<br> Bairro: " +data.bairro +  "<br> Endereço: " + data.logradouro + "<br> Renda per capita: " + Percapita.toFixed(2))
+    */
+   })
 app.listen(3003) 
