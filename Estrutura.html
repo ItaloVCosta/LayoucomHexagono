@@ -12,7 +12,7 @@
         <div class="hex1">
             <div class="hex1 In">
                 <div class="LogoNav">
-                    <div class="Logo"><img src="kukac_guia_manual_aplicacao-2.png" alt=""></div>
+                    <div class="Logo"><img src="imagens/kukac_guia_manual_aplicacao-2.png" alt=""></div>
                     <nav>
                         <ul>
                             <li><a href="https://www.kukac.com.br/#intro-wrap">HOME</a></li>
@@ -34,7 +34,7 @@
             <div class="hex2 In">
                 <div class="Formulario">
                     <div class="Formulariodiv">
-                        <img src="giphy.gif" alt="" class="GIF">
+                        <img src="imagens/giphy.gif" alt="" class="GIF">
                         <form action="http://localhost:3003/RetornoServer" method="POST">
                             <div class="fname">
                                 <label for="fname">Nome(Opcional)</label>
@@ -42,15 +42,15 @@
                             </div>
                             <div class="CEP">
                                 <label for="CEP">CEP</label>
-                                <input type="text" id="CEP" name="CEP" placeholder="Digite o seu CEP" onkeypress="$(this).mask('00.000-000')">
+                                <input type="text" id="CEP" name="CEP" placeholder="Digite o seu CEP" onkeypress="$(this).mask('00.000-000')" required>
                             </div>
                             <div class="Renda">
                                 <label for="Renda">Renda</label>
-                                <input type="number" id="Renda" name="Renda" placeholder="Digite sua renda" step="0.01" min="0.01">
+                                <input type="number" id="Renda" name="Renda" placeholder="Digite sua renda" step="0.01" min="0.01" required>
                             </div>
                             <div class="Dependentes">
                                 <label for="Dependentes">Numero de dependentes</label>
-                                <input type="text" id="Dependentes" name="Dependentes" placeholder="Digite o número de dependentes">
+                                <input type="text" id="Dependentes" name="Dependentes" placeholder="Digite o número de dependentes" required>
                             </div>
                             <div class="Botao" >
                                 <input type="submit" value="Enviar">

@@ -5,7 +5,7 @@ body
     margin: 0;
     align-items: center;
     justify-content: space-around;
-    background-image: url(banner-2.jpg);
+    background-image: url(imagens/banner-2.jpg);
     overflow-y: hidden;
 }
 
