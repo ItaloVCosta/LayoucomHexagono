@@ -217,7 +217,7 @@ form
     flex-flow: column wrap;
 
 }
-.fname, .CEP, .Renda, .Dependentes, .Botao
+.fname, .CEP, .Renda, .Dependentes
 {
   display: flex;
   flex-flow: column wrap;
@@ -225,6 +225,16 @@ form
   align-content: space-around;
   justify-content: space-around;
   font-size: 1vw;  
+}
+.Botao
+{
+    display: flex;
+    flex-flow: column wrap;
+    height: 20%;
+    align-content: space-around;
+    justify-content: space-around;
+    font-size: 1vw;
+    width: 50%;
 }
 .Botao input
 {
@@ -238,4 +248,7 @@ form
   font-family: 'Dosis', sans-serif;
   color: white;
   background: black;
+}
+input{
+    width: 50%;
 }
